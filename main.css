@@ -131,7 +131,7 @@ h1 {
   border-top: var(--secondary-bg-color) 0.4rem solid;
   border-bottom: var(--secondary-bg-color) 0.4rem solid;
   overflow: hidden;
-  background-color: var(--overlay-color);
+  background-color: white;
 }
 
 .scroller-two {
@@ -150,7 +150,7 @@ h1 {
   white-space: nowrap;
   word-spacing: 5rem;
   animation: move-rtl 60s linear infinite;
-  color: var(--primary-text-color);
+  color: black;
 }
 
 .scroller-text-two {
@@ -181,7 +181,7 @@ h1 {
 }
 
 p {
-  color: var(--primary-text-color);
+  color: red;
   padding-top: 4.5rem;
   margin: 4.5rem;
   font-size: 1.6rem;
