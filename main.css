@@ -199,6 +199,7 @@ p {
   }
   .menu-overlay {
     height: 50rem;
+    border-bottom: var(--secondary-bg-color) 0.2rem solid;
   }
   .grid-container {
     margin: 1.5rem;
@@ -220,13 +221,13 @@ p {
   .scroller {
     top: 55rem;
     height: 10rem;
-    border-top: var(--secondary-bg-color) 0.4rem solid;
+    border-top: var(--secondary-bg-color) 0.2rem solid;
   }
   .scroller-two {
     top: 65rem;
     height: 10rem;
     border-top: #000 0.4rem solid;
-    border-bottom: var(--secondary-bg-color) 0.4rem solid;
+    border-bottom: var(--secondary-bg-color) 0.2rem solid;
   }
   .scroller-text,
   .scroller-text-two {
