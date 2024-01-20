@@ -1,11 +1,17 @@
 :root {
-  --primary-bg-color: #000;
-  --secondary-bg-color: #fff;
-  --primary-text-color: #fff;
-  --secondary-text-color: #000;
-  --tertiary-text-color: #9b53ff;
-  --overlay-color: #9b53ff;
+  --primary-bg-color: #0d0d0d;
+  --primary-text-color: #f2f2f2;
+  --secondary-bg-color: #f2f2f2;
+  --secondary-text-color: #f2f2f2;
+  --tertiary-text-color: #f2f2f2;
   font-size: 10px;
+}
+.light-theme {
+  --primary-bg-color: #f2f2f2;
+  --primary-text-color: #0d0d0d;
+  --secondary-bg-color: #0d0d0d;
+  --secondary-text-color: #f2f2f2;
+  --tertiary-text-color: #f2f2f2;
 }
 
 * {
@@ -30,10 +36,14 @@ nav {
   position: fixed;
   top: 0;
   padding: 4.5rem;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: var(--primary-text-color);
+  color: var(--secondary-text-color);
   mix-blend-mode: difference;
+}
+
+.light {
+  cursor: pointer;
 }
 
 .menu-btn-open {
@@ -45,8 +55,8 @@ nav {
   top: 0;
   width: 100%;
   height: 56rem;
-  background: red;
-  border-bottom: red 0.4rem solid;
+  background: var(--secondary-bg-color);
+  border-bottom: var(--secondary-bg-color) 0.4rem solid;
   pointer-events: none;
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   z-index: 1000 !important;
@@ -60,7 +70,7 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 4.5rem;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: var(--secondary-text-color);
 }
@@ -100,26 +110,26 @@ nav {
 }
 
 h1 {
-  color: var(--primary-text-color);
-  font-size: 1.8rem;
+  color: var(--tertiary-text-color);
+  font-size: 1.5rem;
   font-weight: bold;
 }
-.large-text {
-  white-space: pre-wrap;
-  word-break: break-all;
-  line-height: 1.2;
-  font-size: 1.6rem;
-  text-align: justify;
+
+.spacer {
+  margin-top: 11rem;
+  margin-bottom: 0rem;
   margin-right: 4.5rem;
   margin-left: 4.5rem;
-  margin-top: 11rem;
-  margin-bottom: 6rem;
   width: auto;
-  height: 45rem;
-  border-radius: 15px;
+  height: 65rem;
   overflow: hidden;
-  padding: 0;
-  color: red;
+  border-radius: 40px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .scroller {
@@ -127,38 +137,16 @@ h1 {
   justify-content: flex-start;
   align-items: center;
   top: 58rem;
-  height: 10rem;
-  border-top: var(--secondary-bg-color) 0.4rem solid;
-  border-bottom: var(--secondary-bg-color) 0.4rem solid;
-  overflow: hidden;
-  background-color: white;
-}
-
-.scroller-two {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  top: 68rem;
-  height: 10rem;
-  border-bottom: var(--secondary-bg-color) 0.4rem solid;
+  height: 35rem;
   overflow: hidden;
 }
 
 .scroller-text {
-  font-size: 7rem;
+  font-size: 30rem;
   font-weight: bold;
   white-space: nowrap;
   word-spacing: 5rem;
-  animation: move-rtl 60s linear infinite;
-  color: black;
-}
-
-.scroller-text-two {
-  font-size: 7rem;
-  font-weight: bold;
-  white-space: nowrap;
-  word-spacing: 5rem;
-  animation: move-ltr 60s linear infinite;
+  animation: move-rtl 300s linear infinite;
   color: var(--primary-text-color);
 }
 
@@ -171,17 +159,8 @@ h1 {
   }
 }
 
-@keyframes move-ltr {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
 p {
-  color: red;
+  color: var(--primary-text-color);
   padding-top: 4.5rem;
   margin: 4.5rem;
   font-size: 1.6rem;
@@ -191,28 +170,27 @@ p {
 @media (max-width: 600px) {
   nav {
     padding: 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .menu-nav {
     padding: 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .menu-overlay {
     height: 50rem;
-    border-bottom: red 0.3rem solid;
+    border-bottom: var(--secondary-bg-color) 0.3rem solid;
   }
   .grid-container {
     margin: 1.5rem;
     gap: 1.5rem;
   }
-  .large-text {
-    height: 40rem;
+  .spacer {
+    margin-top: 6rem;
+    margin-bottom: 0rem;
     margin-right: 1.5rem;
     margin-left: 1.5rem;
-    margin-top: 6rem;
-    margin-bottom: 5rem;
-    border-radius: 20px;
-    font-size: 1.6rem;
+    height: 50rem;
+    border-radius: 2rem;
   }
   p {
     margin-left: 1.5rem;
@@ -220,17 +198,26 @@ p {
   }
   .scroller {
     top: 55rem;
-    height: 10rem;
-    border-top: var(--secondary-bg-color) 0.3rem solid;
+    height: 25rem;
   }
-  .scroller-two {
-    top: 65rem;
-    height: 10rem;
-    border-top: #000 0.3rem solid;
-    border-bottom: var(--secondary-bg-color) 0.3rem solid;
+  .scroller-text {
+    font-size: 20rem;
   }
-  .scroller-text,
-  .scroller-text-two {
-    font-size: 5.5rem;
+}
+
+@media (min-width: 601px) and (max-width: 1600px) {
+  .spacer {
+    margin-top: 9rem;
+    margin-bottom: 0rem;
+    margin-right: 4.5rem;
+    margin-left: 4.5rem;
+    height: 46rem;
+  }
+  .scroller {
+    top: 30rem;
+    height: 25rem;
+  }
+  .scroller-text {
+    font-size: 25rem;
   }
 }

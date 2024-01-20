@@ -34,3 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
   tl.reverse();
 });
 
+var light = document.getElementById("light");
+
+light.onclick = function () {
+  document.body.classList.toggle("light-theme");
+  if (document.body.classList.contains("light-theme")) {
+    light.textContent = "DARK";
+  } else {
+    light.textContent = "LIGHT";
+  }
+};
