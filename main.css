@@ -4,6 +4,7 @@
   --secondary-bg-color: #f2f2f2;
   --secondary-text-color: #f2f2f2;
   --tertiary-text-color: #f2f2f2;
+  --fourth-text-color: #0d0d0d;
   font-size: 10px;
 }
 .light-theme {
@@ -12,6 +13,7 @@
   --secondary-bg-color: #0d0d0d;
   --secondary-text-color: #f2f2f2;
   --tertiary-text-color: #f2f2f2;
+  --fourth-text-color: #f2f2f2;
 }
 
 * {
@@ -72,7 +74,7 @@ nav {
   padding: 4.5rem;
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--secondary-text-color);
+  color: var(--fourth-text-color);
 }
 
 .grid-container {
@@ -189,7 +191,7 @@ p {
     margin-bottom: 0rem;
     margin-right: 1.5rem;
     margin-left: 1.5rem;
-    height: 50rem;
+    height: 35rem;
     border-radius: 2rem;
   }
   p {
