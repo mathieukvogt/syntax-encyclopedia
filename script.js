@@ -44,3 +44,15 @@ light.onclick = function () {
     light.textContent = "LIGHT";
   }
 };
+
+function toggleDetail(detailId, event) {
+  var detailRow = document.getElementById(detailId);
+  var isExpanded = detailRow.style.display === "table-row";
+  detailRow.style.display = isExpanded ? "none" : "table-row";
+
+  if (isExpanded) {
+    event.target.classList.remove("expanded");
+  } else {
+    event.target.classList.add("expanded");
+  }
+}

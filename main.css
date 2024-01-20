@@ -11,8 +11,8 @@
   --primary-bg-color: #f2f2f2;
   --primary-text-color: #0d0d0d;
   --secondary-bg-color: #0d0d0d;
-  --secondary-text-color: #f2f2f2;
-  --tertiary-text-color: #f2f2f2;
+  --secondary-text-color: #0d0d0d;
+  --tertiary-text-color: #0d0d0d;
   --fourth-text-color: #f2f2f2;
 }
 
@@ -161,12 +161,72 @@ img {
   }
 }
 
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0 2rem 0;
+  padding: 4.5rem;
+  height: 30rem;
+  background-color: var(--secondary-bg-color);
+}
+
+.title {
+  color: var(--fourth-text-color);
+  font-size: 12rem;
+  font-weight: bold;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+h2 {
+  color: var(--secondary-text-color);
+  margin: 4.5rem;
+  font-size: 3rem;
+}
+
 p {
   color: var(--primary-text-color);
-  padding-top: 4.5rem;
   margin: 4.5rem;
   font-size: 1.6rem;
+  font-weight: bold;
   text-align: justify;
+}
+
+.table-container {
+  margin: 4.5rem;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+th,
+td {
+  border-collapse: collapse;
+  padding: 2rem 0;
+  border-top: var(--secondary-bg-color) solid 0.4rem;
+  color: var(--secondary-text-color);
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.expandable-row-content {
+  display: none;
+}
+.clickable {
+  cursor: pointer;
+}
+.clickable:hover {
+  text-decoration: none;
+}
+.clickable::after {
+  content: " \02B06"; /* Down-pointing triangle, indicating expandable */
+}
+.expanded::after {
+  content: " \25B2"; /* Up-pointing triangle, indicating collapsible */
 }
 
 @media (max-width: 600px) {
@@ -194,9 +254,12 @@ p {
     height: 35rem;
     border-radius: 2rem;
   }
+  h2 {
+    margin: 4.5rem 1.5rem 1.5rem 1.5rem;
+    font-size: 2rem;
+  }
   p {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    margin: 4.5rem 1.5rem;
   }
   .scroller {
     top: 55rem;
@@ -204,6 +267,18 @@ p {
   }
   .scroller-text {
     font-size: 20rem;
+  }
+  .title-container {
+    margin: 1.5rem 0 1.5rem 0;
+    padding: 1.5rem;
+    height: 10rem;
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+  .table-container {
+    margin: 1.5rem;
   }
 }
 
@@ -221,5 +296,12 @@ p {
   }
   .scroller-text {
     font-size: 25rem;
+  }
+  .title-container {
+    height: 15rem;
+  }
+
+  .title {
+    font-size: 6rem;
   }
 }
