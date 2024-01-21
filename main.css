@@ -57,7 +57,7 @@ nav {
   top: 0;
   left: 0;
   pointer-events: none;
-  background: red;
+  background: var(--fourth-text-color);
   -webkit-transform: scaleY(0);
   transform: scaleY(0);
 }
@@ -105,16 +105,39 @@ nav {
 }
 
 .grid-item {
+  position: relative;
   background-size: cover;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
+.grid-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(
+    116,
+    57,
+    255,
+    0.5
+  ); /* Adjust the color and opacity here */
+  border-radius: 1rem; /* To maintain the border radius of the .grid-item */
+  z-index: 1; /* Ensure it's above the background image */
+}
+
+.grid-item * {
+  position: relative;
+  z-index: 2;
+}
+
 .card1 {
-  background: url(./assets/p1.webp) no-repeat 50% 50%;
+  background: url(./assets/p2.jpeg) no-repeat 50% 50%;
 }
 
 .card2 {
@@ -258,6 +281,12 @@ td {
   content: " \27B7"; /* Up-pointing triangle, indicating collapsible */
 }
 
+.github {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--secondary-text-color);
+}
+
 @media (max-width: 600px) {
   nav {
     padding: 1.5rem;
@@ -311,7 +340,7 @@ td {
   }
 
   .title {
-    font-size: 6rem;
+    font-size: 5rem;
   }
   .table-container {
     margin: 1.5rem;
