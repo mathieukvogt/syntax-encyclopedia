@@ -32,6 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
     .querySelector(".menu-btn-close")
     .addEventListener("click", closeMenu);
   tl.reverse();
+
+  document.querySelectorAll(".grid-item a").forEach((anchor) => {
+    anchor.addEventListener("click", function () {
+      setTimeout(closeMenu, 100); // Delay in milliseconds
+    });
+  });
 });
 
 var light = document.getElementById("light");
