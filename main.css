@@ -5,6 +5,7 @@
   --secondary-text-color: #f2f2f2;
   --tertiary-text-color: #f2f2f2;
   --fourth-text-color: #0d0d0d;
+  --fifth-text-color: #f2f2f2;
   font-size: 10px;
 }
 .light-theme {
@@ -40,8 +41,25 @@ nav {
   padding: 4.5rem;
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--secondary-text-color);
+  color: var(--fifth-text-color);
   mix-blend-mode: difference;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.transition {
+  position: absolute;
+  z-index: 2000;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background: red;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
 }
 
 .light {
@@ -111,8 +129,12 @@ nav {
   background: url(./assets/p3.jpeg) no-repeat 50% 50%;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
-  color: var(--tertiary-text-color);
+  color: var(--fifth-text-color);
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -185,11 +207,18 @@ h2 {
   font-size: 3rem;
 }
 
-p {
+.function-text {
   color: var(--primary-text-color);
   margin: 4.5rem;
   font-size: 1.6rem;
   font-weight: bold;
+  text-align: justify;
+}
+
+.table-text {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0;
   text-align: justify;
 }
 
@@ -223,10 +252,10 @@ td {
   text-decoration: none;
 }
 .clickable::after {
-  content: " \02B06"; /* Down-pointing triangle, indicating expandable */
+  content: " \27B9"; /* Down-pointing triangle, indicating expandable */
 }
 .expanded::after {
-  content: " \25B2"; /* Up-pointing triangle, indicating collapsible */
+  content: " \27B7"; /* Up-pointing triangle, indicating collapsible */
 }
 
 @media (max-width: 600px) {
@@ -258,8 +287,15 @@ td {
     margin: 4.5rem 1.5rem 1.5rem 1.5rem;
     font-size: 2rem;
   }
-  p {
+  .function-text {
     margin: 4.5rem 1.5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  .table-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0;
   }
   .scroller {
     top: 55rem;
@@ -271,11 +307,11 @@ td {
   .title-container {
     margin: 1.5rem 0 1.5rem 0;
     padding: 1.5rem;
-    height: 10rem;
+    height: 15rem;
   }
 
   .title {
-    font-size: 4rem;
+    font-size: 6rem;
   }
   .table-container {
     margin: 1.5rem;
