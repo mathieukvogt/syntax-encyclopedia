@@ -154,7 +154,7 @@ a {
 }
 
 h1 {
-  color: var(--fifth-text-color);
+  color: var(--secondary-text-color);
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -191,6 +191,24 @@ img {
   white-space: nowrap;
   word-spacing: 5rem;
   animation: move-rtl 300s linear infinite;
+  color: var(--primary-text-color);
+}
+
+.scroller-other {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30rem;
+  overflow: hidden;
+  margin-top: 8rem;
+}
+
+.scroller-text-other {
+  font-size: 30rem;
+  font-weight: bold;
+  white-space: nowrap;
+  word-spacing: 5rem;
+  animation: move-rtl 400s linear infinite;
   color: var(--primary-text-color);
 }
 
@@ -290,6 +308,11 @@ h2 {
   transition: transform 0.3s ease; /* Smooth transition for rotation */
 }
 
+pre,
+code {
+  border-radius: 0.8rem; /* Adjust as needed */
+}
+
 .github {
   cursor: pointer;
   text-decoration: none;
@@ -336,6 +359,19 @@ h2 {
   }
   .scroller-text {
     font-size: 20rem;
+  }
+  .scroller-other {
+    height: 30rem;
+    margin-top: 3.5rem;
+  }
+
+  .scroller-text-other {
+    font-size: 30rem;
+    font-weight: bold;
+    white-space: nowrap;
+    word-spacing: 5rem;
+    animation: move-rtl 400s linear infinite;
+    color: var(--primary-text-color);
   }
   .title-container {
     margin: 1.5rem 0 1.5rem 0;

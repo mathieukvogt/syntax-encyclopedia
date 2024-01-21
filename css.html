@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MONOTONE | Syntax Reference</title>
     <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
   <body>
@@ -30,23 +35,52 @@
       </div>
       </div>
     </div>
-    <main class="container" data-barba="container" data-barba-namespace="css">
-    <div class="spacer">
-      <img src="assets/hero.jpg" alt="" />
-    </div>
-    <div class="scroller">
-      <div class="scroller-text">
-        MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱
-        MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱
-        MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱
-        MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱
+    <main class="container" data-barba="container" data-barba-namespace="html">
+    <div class="scroller-other">
+      <div class="scroller-text-other">
+        CSS ✐ CSS ✐ CSS ✐ CSS ✐ CSS ✐ CSS ✐ CSS ✐
+        CSS ✐ CSS ✐ CSS ✐ CSS ✐ CSS ✐ CSS ✐ CSS ✐
+        CSS ✐ CSS ✐ CSS ✐ CSS ✐ CSS ✐ CSS ✐ CSS ✐
+        CSS ✐ CSS ✐ CSS ✐ CSS ✐ CSS ✐ CSS ✐ CSS ✐
       </div>
     </div>
-    </div>
-    <div class="title-container">
-      <div class="title">C</div>
-      <div class="title">S</div>
-      <div class="title">S</div>
+    <!-- FAQ Sections -->
+    <div class="faq-container">
+      <!-- FAQ Row 1 -->
+      <div class="faq-row">
+        <div class="faq-header">
+          <span>Function Declaration</span>
+          <span class="symbol">&#10169;</span>
+        </div>
+        <div class="faq-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+          <pre>
+            <code class="language-js">
+console.log('Hello, world!');
+            </code>
+          </pre>
+        </div>
+      </div>
+      <!-- FAQ Row 2 -->
+      <div class="faq-row">
+        <div class="faq-header">
+          <span>Anonymous Function</span>
+          <span class="symbol">&#10169;</span>
+        </div>
+        <div class="faq-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+      </div>
+      <!-- FAQ Row 3 -->
+      <div class="faq-row">
+        <div class="faq-header">
+          <span>Arrow Function</span>
+          <span class="symbol">&#10169;</span>
+        </div>
+        <div class="faq-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+      </div>
     </div>
     </div>
   </main>
@@ -54,6 +88,10 @@
 </body>
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
     <script src="./script.js"></script>
   </body>
 </html>

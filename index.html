@@ -1,102 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Head Section -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MONOTONE | Syntax Reference</title>
     <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
-  <body>
-    <body data-barba="wrapper">
-      <div class="transition"></div>
-      <div class="wrapper">
-    <nav>
-      <div class="light" id="light">LIGHT</div>
-      <div class="logo">MONOTONE</div>
-      <div class="menu-btn-open">MENU</div>
-    </nav>
-    <div class="menu-overlay">
-      <div class="menu-nav">
-        <div class="light-overlay" id="light">LIGHT</div>
-        <div class="menu-logo">MONOTONE</div>
-        <div class="menu-btn-close">CLOSE</div>
-      </div>
-      <div class="grid-container">
-        <div class="grid-item card1"><a href="index.html"><h1>JAVASCRIPT</h1></a></div>
-        <div class="grid-item card2"><a href="html.html"><h1>HTML</h1></a></div>
-        <div class="grid-item card3"><a href="css.html"><h1>CSS</h1></a></div>
-        <div class="grid-item card4"><a href="git.html"><h1>GIT</h1></a></div>
-      </div>
+  <body data-barba="wrapper">
+    <!-- Transition Overlay -->
+    <div class="transition"></div>
+
+    <!-- Main Wrapper -->
+    <div class="wrapper">
+      <!-- Navigation Bar -->
+      <nav>
+        <div class="light" id="light">LIGHT</div>
+        <div class="logo">MONOTONE</div>
+        <div class="menu-btn-open">MENU</div>
+      </nav>
+
+      <!-- Menu Overlay -->
+      <div class="menu-overlay">
+        <div class="menu-nav">
+          <div class="light-overlay" id="light">LIGHT</div>
+          <div class="menu-logo">MONOTONE</div>
+          <div class="menu-btn-close">CLOSE</div>
+        </div>
+
+        <!-- Grid Container -->
+        <div class="grid-container">
+          <div class="grid-item card1">
+            <a href="index.html" id="javascriptLink"><h1>JAVASCRIPT</h1></a>
+          </div>
+          <div class="grid-item card2">
+            <a href="html.html"><h1>HTML</h1></a>
+          </div>
+          <div class="grid-item card3">
+            <a href="css.html"><h1>CSS</h1></a>
+          </div>
+          <div class="grid-item card4">
+            <a href="git.html"><h1>GIT</h1></a>
+          </div>
+        </div>
       </div>
     </div>
+
+    <!-- Main Content Container -->
     <main class="container" data-barba="container" data-barba-namespace="home">
-    <div class="spacer">
-      <img src="assets/hero.jpg" alt="" />
-    </div>
-    <div class="scroller">
-      <div class="scroller-text">
-        MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱
-        MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱
-        MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱
-        MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱
+      <!-- Hero Image -->
+      <div class="spacer">
+        <img src="assets/hero.jpg" alt="" />
       </div>
-    </div>
-    </div>
-    <div class="title-container">
-      <div class="title">J</div>
-      <div class="title">A</div>
-      <div class="title">V</div>
-      <div class="title">A</div>
-      <div class="title">S</div>
-      <div class="title">C</div>
-      <div class="title">R</div>
-      <div class="title">I</div>
-      <div class="title">P</div>
-      <div class="title">T</div>
-    </div>
-    <h2>01 FUNCTIONS</h2>
-    <p class="function-text">In programming, we often use code to perform a specific task multiple times. 
-      Instead of rewriting the same code, we can group a block of code together and associate 
-      it with one task, then we can reuse that block of code whenever we need to perform 
-      the task again. We achieve this by creating a function. A function is a reusable block 
-      of code that groups together a sequence of statements to perform a specific task.
-    </p>
-    <div class="faq-container">
-      <div class="faq-row">
-        <div class="faq-header">
-          <span>Function Declaration</span>
-          <span class="symbol">&#10169;</span>
-        </div>
-        <div class="faq-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+
+      <!-- Scroller Text -->
+      <div class="scroller">
+        <div class="scroller-text">
+          MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱
+          MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱
+          MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱
+          MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱ MONOTONE ✱
         </div>
       </div>
-      <div class="faq-row">
-        <div class="faq-header">
-          <span>Anonymous Function</span>
-          <span class="symbol">&#10169;</span>
+
+      <!-- Title Container -->
+      <div class="title-container">
+        <div class="title">J</div>
+        <div class="title">A</div>
+        <div class="title">V</div>
+        <div class="title">A</div>
+        <div class="title">S</div>
+        <div class="title">C</div>
+        <div class="title">R</div>
+        <div class="title">I</div>
+        <div class="title">P</div>
+        <div class="title">T</div>
+      </div>
+
+      <!-- Function Introduction -->
+      <h2>01 FUNCTIONS</h2>
+      <p class="function-text">
+        In programming, we often use code to perform a specific task multiple
+        times...
+      </p>
+
+      <!-- FAQ Sections -->
+      <div class="faq-container">
+        <!-- FAQ Row 1 -->
+        <div class="faq-row">
+          <div class="faq-header">
+            <span>Function Declaration</span>
+            <span class="symbol">&#10169;</span>
+          </div>
+          <div class="faq-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <pre>
+              <code class="language-js">
+console.log('Hello, world!');
+              </code>
+            </pre>
+          </div>
         </div>
-        <div class="faq-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <!-- FAQ Row 2 -->
+        <div class="faq-row">
+          <div class="faq-header">
+            <span>Anonymous Function</span>
+            <span class="symbol">&#10169;</span>
+          </div>
+          <div class="faq-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+          </div>
+        </div>
+        <!-- FAQ Row 3 -->
+        <div class="faq-row">
+          <div class="faq-header">
+            <span>Arrow Function</span>
+            <span class="symbol">&#10169;</span>
+          </div>
+          <div class="faq-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+          </div>
         </div>
       </div>
-      <div class="faq-row">
-        <div class="faq-header">
-          <span>Arrow Function</span>
-          <span class="symbol">&#10169;</span>
-        </div>
-        <div class="faq-content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        </div>
-      </div>
-    </div>
-  </main>
-</div>
-<footer>
-  <p class="function-text">CHECK SOURCE CODE ON MY <a class="github" href="https://github.com/mathieukvogt" target="_blank">GITHUB &#8680;</a></p>
-</footer>
-</body>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p class="function-text">
+        CHECK SOURCE CODE ON MY
+        <a class="github" href="https://github.com/mathieukvogt" target="_blank"
+          >GITHUB &#8680;</a
+        >
+      </p>
+    </footer>
+
+    <!-- JavaScript Sources -->
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="./script.js"></script>
