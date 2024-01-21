@@ -51,17 +51,18 @@ light.onclick = function () {
   }
 };
 
-function toggleDetail(detailId, event) {
-  var detailRow = document.getElementById(detailId);
-  var isExpanded = detailRow.style.display === "table-row";
-  detailRow.style.display = isExpanded ? "none" : "table-row";
-
-  if (isExpanded) {
-    event.target.classList.remove("expanded");
-  } else {
-    event.target.classList.add("expanded");
-  }
-}
+document.querySelectorAll(".faq-header").forEach((header) => {
+  header.addEventListener("click", () => {
+    const faqContent = header.nextElementSibling;
+    if (faqContent.style.height) {
+      faqContent.style.height = null; // Collapse
+    } else {
+      const contentHeight = faqContent.scrollHeight + "px";
+      faqContent.style.height = contentHeight; // Expand
+    }
+    header.parentElement.classList.toggle("expanded");
+  });
+});
 
 /* BARBA PAGE TRANSITION */
 
@@ -106,4 +107,34 @@ barba.init({
       },
     },
   ],
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // ... existing code ...
+
+  // Function to manually trigger the page transition
+  function triggerPageTransition() {
+    // Manually trigger the page transition
+    pageTransition();
+    // Add any additional logic here if needed
+  }
+
+  // Event listener for menu anchor elements
+  document.querySelectorAll(".grid-item a").forEach((item) => {
+    item.addEventListener("click", function (event) {
+      const targetPage = this.getAttribute("href").replace(".html", "");
+      const currentPage = window.location.pathname
+        .split("/")
+        .pop()
+        .replace(".html", "");
+
+      // Check if the target page is the same as the current page
+      if (targetPage === currentPage) {
+        event.preventDefault(); // Prevent default link behavior
+        triggerPageTransition(); // Call the function to trigger the transition
+      }
+    });
+  });
+
+  // ... existing code ...
 });

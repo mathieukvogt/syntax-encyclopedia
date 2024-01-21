@@ -121,11 +121,8 @@ nav {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(
-    116,
-    57,
-    255,
-    0.5
+  background-color: var(
+    --primary-bg-color
   ); /* Adjust the color and opacity here */
   border-radius: 1rem; /* To maintain the border radius of the .grid-item */
   z-index: 1; /* Ensure it's above the background image */
@@ -238,47 +235,59 @@ h2 {
   text-align: justify;
 }
 
-.table-text {
-  font-size: 1.6rem;
-  font-weight: bold;
-  margin: 0;
-  text-align: justify;
-}
-
-.table-container {
-  margin: 4.5rem;
-}
-
-table {
-  table-layout: fixed;
+.faq-container {
   width: 100%;
+  margin: 4.5rem;
+  max-width: calc(100% - 9rem);
+  font-family: Helvetica;
 }
 
-th,
-td {
-  border-collapse: collapse;
-  padding: 2rem 0;
-  border-top: var(--secondary-bg-color) solid 0.4rem;
-  color: var(--secondary-text-color);
-  text-align: left;
-  font-size: 1.8rem;
-  font-weight: bold;
+.faq-row {
+  border-top: 0.3rem solid var(--secondary-bg-color);
 }
 
-.expandable-row-content {
-  display: none;
+.faq-row:last-child {
+  border-bottom: 0.3rem solid var(--secondary-bg-color);
 }
-.clickable {
+
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
   cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--secondary-text-color);
 }
-.clickable:hover {
-  text-decoration: none;
+
+.faq-content {
+  transform-origin: top;
+  transform: scaleY(0);
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--secondary-text-color);
 }
-.clickable::after {
-  content: " \27B9"; /* Down-pointing triangle, indicating expandable */
+
+.faq-content p {
+  margin: 2rem 0;
 }
-.expanded::after {
-  content: " \27B7"; /* Up-pointing triangle, indicating collapsible */
+
+/* When expanded, change symbol and height */
+.faq-row.expanded .faq-content {
+  transform: scaleY(1);
+  height: auto;
+}
+
+.faq-row.expanded .symbol {
+  transform: rotate(90deg);
+}
+
+.symbol {
+  transition: transform 0.3s ease; /* Smooth transition for rotation */
 }
 
 .github {
@@ -321,11 +330,6 @@ td {
     font-size: 1.4rem;
     font-weight: bold;
   }
-  .table-text {
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin: 0;
-  }
   .scroller {
     top: 55rem;
     height: 25rem;
@@ -338,12 +342,12 @@ td {
     padding: 1.5rem;
     height: 15rem;
   }
-
   .title {
     font-size: 5rem;
   }
-  .table-container {
+  .faq-container {
     margin: 1.5rem;
+    max-width: calc(100% - 3rem);
   }
 }
 
