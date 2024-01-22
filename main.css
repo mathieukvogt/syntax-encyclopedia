@@ -272,7 +272,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 2rem 0;
   cursor: pointer;
   font-size: 2rem;
   font-weight: bold;
@@ -285,13 +285,14 @@ h2 {
   height: 0;
   overflow: hidden;
   transition: height 0.3s ease;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
+  text-align: justify;
   color: var(--secondary-text-color);
 }
 
 .faq-content p {
-  margin: 2rem 0;
+  margin: 0;
 }
 
 /* When expanded, change symbol and height */
@@ -349,7 +350,7 @@ code {
     font-size: 2rem;
   }
   .function-text {
-    margin: 4.5rem 1.5rem;
+    margin: 3rem 1.5rem;
     font-size: 1.4rem;
     font-weight: bold;
   }
@@ -376,7 +377,7 @@ code {
   .title-container {
     margin: 1.5rem 0 1.5rem 0;
     padding: 1.5rem;
-    height: 15rem;
+    height: 25rem;
   }
   .title {
     font-size: 5rem;
@@ -384,6 +385,12 @@ code {
   .faq-container {
     margin: 1.5rem;
     max-width: calc(100% - 3rem);
+  }
+  .faq-content {
+    font-size: 1.4rem;
+  }
+  .function-text {
+    font-size: 1.4rem;
   }
 }
 
@@ -403,7 +410,7 @@ code {
     font-size: 25rem;
   }
   .title-container {
-    height: 15rem;
+    height: 30rem;
   }
 
   .title {

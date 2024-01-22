@@ -90,8 +90,19 @@
       <!-- Function Introduction -->
       <h2>01 FUNCTIONS</h2>
       <p class="function-text">
-        In programming, we often use code to perform a specific task multiple
-        times...
+        Functions in programming are reusable blocks of code that perform
+        specific tasks, enabling better organization and readability of code.
+        They are defined by a unique name and can accept parameters for input,
+        allowing flexibility in their usage. When called, a function's code is
+        executed, and then control returns to the part of the program where it
+        was called. Functions can return values, making their outputs usable in
+        various parts of the program. The use of functions enhances code
+        reusability since the same function can be utilized multiple times with
+        varying inputs. In programming languages, functions can be either
+        built-in, provided by the language itself, or user-defined, created by
+        the programmer for specific tasks. They play a crucial role in
+        modularizing code, breaking down complex problems into smaller,
+        manageable segments.
       </p>
 
       <!-- FAQ Sections -->
@@ -103,10 +114,56 @@
             <span class="symbol">&#10169;</span>
           </div>
           <div class="faq-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <p>
+              In JavaScript, function declarations are a fundamental way to
+              define functions, which are reusable blocks of code. They begin
+              with the 'function' keyword, followed by a unique name that is
+              used to call the function. Optionally, the function can have
+              parameters, listed inside parentheses and separated by commas, to
+              pass data into the function. The core functionality of the
+              function is written inside a set of curly braces {}, encompassing
+              the function body where the specific tasks are coded.
+            </p>
             <pre>
               <code class="language-js">
-console.log('Hello, world!');
+function calculateArea(width, height) {
+  return width * height;
+}              
+              </code>
+            </pre>
+            <p>
+              A function is called by using its name followed by parentheses. If
+              the function requires arguments, these values are placed inside
+              the parentheses, separated by commas. When the function is called,
+              the JavaScript engine runs the code within the function's body,
+              using the provided arguments if any.
+            </p>
+            <pre>
+              <code class="language-js">
+// Definining the function
+function calculateArea(width, height) {
+  return width * height;
+}
+
+// Calling the function
+calculateArea(5, 10); // 50
+              </code>
+            </pre>
+            <p>
+              The return keyword within a function is used to pass back a value
+              from the function to the point where it was called. When return is
+              encountered, the function stops executing and sends the specified
+              value back to the caller. If the return keyword is omitted in a
+              function that is expected to produce a value, the function will
+              return undefined by default, which is a common mistake.
+            </p>
+            <pre>
+              <code class="language-js">
+function addNumbers(a, b) {
+  return a + b;
+}
+  
+let sum = addNumbers(5, 3);      
               </code>
             </pre>
           </div>
@@ -114,21 +171,124 @@ console.log('Hello, world!');
         <!-- FAQ Row 2 -->
         <div class="faq-row">
           <div class="faq-header">
-            <span>Anonymous Function</span>
+            <span>Arrow Functions</span>
             <span class="symbol">&#10169;</span>
           </div>
           <div class="faq-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <p>
+              Arrow functions, introduced in ES6, offer a more concise syntax
+              compared to traditional function expressions. They are anonymous
+              and change the way this binds in functions. An arrow function is
+              written with a pair of parentheses () that encloses its
+              parameters, followed by a fat arrow => and the function body. In
+              cases where there's only one parameter, the parentheses around the
+              parameter can be omitted. If the function consists of a single
+              expression, curly braces {} for the body and the return keyword
+              are not required; the result of the expression is returned
+              automatically. However, for more complex functions with multiple
+              expressions, curly braces are necessary, and the return keyword
+              must be explicitly used.
+            </p>
+            <pre>
+              <code class="language-js">
+// Arrow function with two parameters
+const sum = (firstParam, secondParam) => { 
+  return firstParam + secondParam; 
+}; 
+
+console.log(sum(2, 5)); // Prints: 7
+
+                
+// Arrow function with no parameters
+const printHello = () => { 
+  console.log('hello'); 
+}; 
+
+printHello(); // Prints: hello
+
+                
+// Arrow function with a single parameter
+const checkWeight = weight => { 
+  console.log(`Baggage weight : ${weight} kilograms.`); 
+}; 
+
+checkWeight(25); // Prints: Baggage weight : 25 kilograms.
+
+                
+// Concise arrow function
+const multiply = (a, b) => a * b; 
+
+console.log(multiply(2, 30)); // Prints: 60              
+              </code>
+            </pre>
           </div>
         </div>
         <!-- FAQ Row 3 -->
         <div class="faq-row">
           <div class="faq-header">
-            <span>Arrow Function</span>
+            <span>Anonymous Functions</span>
             <span class="symbol">&#10169;</span>
           </div>
           <div class="faq-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <p>
+              Anonymous functions in JavaScript are functions that are defined
+              without a name. These functions are often used in situations where
+              a function is required as an argument, such as in callbacks or
+              event handlers, and where the function does not need to be called
+              from elsewhere. Anonymous functions can be created using the
+              traditional function keyword or using the arrow function syntax
+              introduced in ES6. Since they don't have a name, they cannot be
+              referred to elsewhere, which is useful for preventing namespace
+              pollution and providing encapsulation.
+            </p>
+            <pre>
+              <code class="language-js">
+// Named function
+function namedFunction() {
+  console.log("This is a named function.");
+}
+namedFunction(); // Calls the named function
+
+                
+// Anonymous function using the 'function' keyword
+let anonFunc = function() {
+  console.log("This is an anonymous function.");
+};
+anonFunc(); // Calls the anonymous function
+
+                
+// Anonymous function using arrow function syntax
+let anonArrowFunc = () => {
+  console.log("This is an anonymous arrow function.");
+};
+anonArrowFunc(); // Calls the anonymous arrow function            
+              </code>
+            </pre>
+          </div>
+        </div>
+        <div class="faq-row">
+          <div class="faq-header">
+            <span>Function Expression</span>
+            <span class="symbol">&#10169;</span>
+          </div>
+          <div class="faq-content">
+            <p>
+              Function expressions in JavaScript allow the creation of functions
+              within an expression, and they can be either named or anonymous.
+              Unlike function declarations, function expressions are not
+              hoisted, so they must be defined before they are used in the code.
+              These expressions are often assigned to a variable, which can then
+              be used as a reference to the function.
+            </p>
+            <pre>
+              <code class="language-js">
+const square = function(number) {
+  return number * number;
+};
+              
+console.log(square(4)); // Outputs: 16
+              </code>
+            </pre>
           </div>
         </div>
       </div>
