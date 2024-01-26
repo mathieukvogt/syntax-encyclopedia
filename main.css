@@ -245,6 +245,10 @@ h2 {
   font-size: 3rem;
 }
 
+h3 {
+  font-family: monospace, Helvetica, sans serif;
+}
+
 p {
   font-family: monospace, Helvetica, sans serif;
 }

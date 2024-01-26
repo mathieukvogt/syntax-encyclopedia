@@ -57,7 +57,7 @@
     </div>
 
     <!-- Main Content Container -->
-    <main class="container" data-barba="container" data-barba-namespace="home">
+    < class="container" data-barba="container" data-barba-namespace="home">
       <!-- Hero Image -->
       <div class="spacer">
         <img src="assets/hero.jpg" alt="" />
@@ -88,7 +88,218 @@
       </div>
 
       <!-- Function Introduction -->
-      <h2>01 FUNCTIONS</h2>
+      <h2>01 FOUNDATION</h2>
+      <p class="function-text">
+        JavaScript variables are a fundamental aspect of the language,
+        serving as a means to store, retrieve, and manipulate data. They
+        act as named containers for data, significantly enhancing the
+        readability and reusability of code. Instead of repeatedly using
+        specific values, programmers can utilize variables to represent
+        these values, making the code more flexible and easier to manage.
+        In JavaScript, variable declaration is primarily done using one of
+        three keywords: var, let, or const, each serving a specific
+        purpose.
+      </p>
+
+      <div class="faq-container">
+        <!-- FAQ Row 1 -->
+        <div class="faq-row">
+          <div class="faq-header">
+            <span>Introduction</span>
+            <span class="symbol">&#10169;</span>
+          </div>
+          <div class="faq-content">
+            <h3>Variables</h3><br>
+            <h3>var</h3><br>
+            <p>
+              The var keyword is the oldest and was widely used in pre-ES6
+              versions of JavaScript. Variables declared with var are
+              function-scoped, meaning they are accessible within the entire
+              function in which they are declared. If declared outside any
+              function, they are globally accessible. A notable feature of var
+              is that it is subject to hoisting, where the declaration of the
+              variable is moved to the top of its scope, irrespective of where
+              it was initially declared.The introduction of ES6 brought in let
+              and const, providing more options for variable declaration with
+              enhanced scope management.
+            </p>
+              <pre>
+                <code class="language-js">
+// Example 1: Using 'var' to declare a global variable
+var globalVariable = "I am global";
+console.log(globalVariable); // Outputs: I am global
+
+                  
+// Example 2: 'var' is function-scoped and gets hoisted
+function testVar() {
+  if(true) {
+    var functionScopedVariable = "I am inside a function";
+  }
+  console.log(functionScopedVariable); // Outputs: I am inside a function
+}
+testVar();
+              </code>
+            </pre>
+            <h3>let</h3><br>
+            <p>
+              The let keyword allows for block-scoped variables, restricting
+              their accessibility to the block, statement, or expression where
+              they are declared. This is particularly useful in loops and
+              conditional statements, as it limits the variable's scope to that
+              specific block, enhancing code clarity and preventing unintended
+              errors. Variables declared with let can be reassigned but not
+              redeclared within the same scope. If a let variable is not
+              initialized during declaration, it is assigned the value
+              undefined.
+            </p>
+              <pre>
+                <code class="language-js">
+// Example 1: 'let' for block-scoped variables
+for (let i = 0; i < 3; i++) {
+  console.log(i); // Outputs: 0, 1, 2
+}
+// console.log(i); // Uncaught ReferenceError: i is not defined
+
+                  
+// Example 2: Reassigning a 'let' variable
+let mutableVariable = "Initial Value";
+console.log(mutableVariable); // Outputs: Initial Value
+                  
+mutableVariable = "Changed Value";
+console.log(mutableVariable); // Outputs: Changed Value
+                </code>
+              </pre>
+              <h3>const</h3><br>
+              <p>
+              For situations where a variable's value is meant to remain
+              constant, const is used. Like let, const also provides
+              block-scoped variables. However, it adds a layer of protection by
+              making the variable's value immutable - once a const variable is
+              assigned a value during declaration, it cannot be reassigned.
+              Attempting to change the value of a const variable results in a
+              runtime error. This feature is particularly useful for maintaining
+              constants and ensuring that their values remain unchanged
+              throughout the execution of the program. Choosing between var,
+              let, and const depends on the specific needs of the program,
+              particularly in terms of scope and the variable's mutability.
+              Understanding these differences is crucial for effective
+              programming in JavaScript, as it directly impacts the
+              functionality and reliability of the code.
+            </p>
+            <pre>
+              <code class="language-js">
+// Example 1: Declaring a constant
+const pi = 3.14;
+console.log(pi); // Outputs: 3.14
+pi = 3.15; 
+// Uncaught TypeError: Assignment to constant variable.
+
+                
+// Example 2: 'const' in an object
+const person = { name: "Alice", age: 25 };
+console.log(person); // Outputs: { name: "Alice", age: 25 }
+                
+// While the object is constant, its properties can be changed
+person.age = 26;
+console.log(person); // Outputs: { name: "Alice", age: 26 }
+              </code>
+            </pre>
+            <h3>Assignment operator</h3><br>
+            <p>
+              The assignment operator in JavaScript is crucial for assigning values to variables. The basic assignment operator = 
+              assigns the right operand's value to its left operand. JavaScript also includes compound assignment operators that 
+              combine arithmetic operations with assignment, making code more concise. These operators include += for addition, -= 
+              for subtraction, *= for multiplication, and /= for division. Each of these operators performs the specified arithmetic 
+              operation on the left operand with the right operand and then assigns the result back to the left operand.
+            </p>
+            <pre>
+              <code class="language-js">
+// Initialize variables for demonstration
+let a = 10, b = 20, c = 4, d = 15;
+
+// '+=' operator: Adds right operand to the left and assigns the result to the left
+a += 5; // Equivalent to a = a + 5;
+console.log(a); // Outputs: 15
+
+// '-=' operator: Subtracts right operand from the left and assigns the result to the left
+b -= 5; // Equivalent to b = b - 5;
+console.log(b); // Outputs: 15
+
+// '*=' operator: Multiplies left operand by the right and assigns the result to the left
+c *= 3; // Equivalent to c = c * 3;
+console.log(c); // Outputs: 12
+
+// '/=' operator: Divides left operand by the right and assigns the result to the left
+d /= 3; // Equivalent to d = d / 3;
+console.log(d); // Outputs: 5
+
+// Basic assignment
+let number = 5; // Assigns the value 5 to the variable 'number'
+console.log(number); // Outputs: 5
+                
+// Assignment with strings
+let greeting = "Hello, world!"; // Assigns the string "Hello, world!" to the variable 'greeting'
+console.log(greeting); // Outputs: Hello, world!
+                
+// Reassignment
+let age = 30; // Initially assigns 30 to 'age'
+console.log(age); // Outputs: 30
+                
+age = 31; // Reassigns the value of 'age' to 31
+console.log(age); // Outputs: 31
+                
+// Assigning the result of an expression
+let sum = 10 + 5; // Assigns the result of 10 + 5, which is 15, to 'sum'
+console.log(sum); // Outputs: 15
+                
+// Assigning the value of another variable
+let firstNumber = 7;
+let secondNumber = firstNumber; // Assigns the value of 'firstNumber' to 'secondNumber'
+console.log(secondNumber); // Outputs: 7 
+              </code>
+            </pre>
+            <h3>String Interpolation</h3><br>
+            <p>
+              For situations where a variable's value is meant to remain
+              constant, const is used. Like let, const also provides
+              block-scoped variables. However, it adds a layer of protection by
+              making the variable's value immutable - once a const variable is
+              assigned a value during declaration, it cannot be reassigned.
+              Attempting to change the value of a const variable results in a
+              runtime error. This feature is particularly useful for maintaining
+              constants and ensuring that their values remain unchanged
+              throughout the execution of the program. Choosing between var,
+              let, and const depends on the specific needs of the program,
+              particularly in terms of scope and the variable's mutability.
+              Understanding these differences is crucial for effective
+              programming in JavaScript, as it directly impacts the
+              functionality and reliability of the code.
+            </p>
+            <pre>
+              <code class="language-js">
+// Example 1: Declaring a constant
+const pi = 3.14;
+console.log(pi); // Outputs: 3.14
+pi = 3.15; 
+// Uncaught TypeError: Assignment to constant variable.
+
+                
+// Example 2: 'const' in an object
+const person = { name: "Alice", age: 25 };
+console.log(person); // Outputs: { name: "Alice", age: 25 }
+                
+// While the object is constant, its properties can be changed
+person.age = 26;
+console.log(person); // Outputs: { name: "Alice", age: 26 }
+              </code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Function Introduction -->
+      <h2>03 FUNCTIONS</h2>
       <p class="function-text">
         Functions in programming are reusable blocks of code that perform
         specific tasks, enabling better organization and readability of code.
@@ -290,6 +501,8 @@ console.log(square(4)); // Outputs: 16
               </code>
             </pre>
           </div>
+        </div>
+      
         </div>
       </div>
     </main>
