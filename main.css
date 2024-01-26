@@ -75,8 +75,8 @@ nav {
   top: 0;
   width: 100%;
   height: 56rem;
-  background: var(--secondary-bg-color);
-  border-bottom: var(--secondary-bg-color) 0.4rem solid;
+  background: #555555;
+  border-bottom: #555555 0.4rem solid;
   pointer-events: none;
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   z-index: 1000 !important;
@@ -227,7 +227,7 @@ img {
   align-items: center;
   margin: 2rem 0 2rem 0;
   padding: 4.5rem;
-  height: 30rem;
+  height: 25rem;
   background-color: var(--secondary-bg-color);
 }
 
@@ -245,10 +245,14 @@ h2 {
   font-size: 3rem;
 }
 
+p {
+  font-family: monospace, Helvetica, sans serif;
+}
+
 .function-text {
   color: var(--primary-text-color);
   margin: 4.5rem;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: bold;
   text-align: justify;
 }
@@ -285,7 +289,7 @@ h2 {
   height: 0;
   overflow: hidden;
   transition: height 0.3s ease;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: bold;
   text-align: justify;
   color: var(--secondary-text-color);
@@ -331,7 +335,7 @@ code {
   }
   .menu-overlay {
     height: 50rem;
-    border-bottom: var(--secondary-bg-color) 0.3rem solid;
+    border-bottom: #555555 0.3rem solid;
   }
   .grid-container {
     margin: 1.5rem;
@@ -351,7 +355,7 @@ code {
   }
   .function-text {
     margin: 3rem 1.5rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: bold;
   }
   .scroller {
@@ -377,7 +381,7 @@ code {
   .title-container {
     margin: 1.5rem 0 1.5rem 0;
     padding: 1.5rem;
-    height: 25rem;
+    height: 10rem;
   }
   .title {
     font-size: 5rem;
@@ -387,10 +391,10 @@ code {
     max-width: calc(100% - 3rem);
   }
   .faq-content {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   .function-text {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -410,7 +414,7 @@ code {
     font-size: 25rem;
   }
   .title-container {
-    height: 30rem;
+    height: 15rem;
   }
 
   .title {
