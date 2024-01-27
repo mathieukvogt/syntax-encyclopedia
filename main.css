@@ -98,8 +98,8 @@ nav {
   top: 0;
   width: 100%;
   height: 56rem;
-  background: #555555;
-  border-bottom: #555555 0.4rem solid;
+  background: #0400df;
+  border-bottom: #0400df 0.4rem solid;
   pointer-events: none;
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   z-index: 1000 !important;
@@ -115,7 +115,7 @@ nav {
   padding: 4.5rem;
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--fourth-text-color);
+  color: #f2f2f2;
 }
 
 .grid-container {
@@ -144,9 +144,7 @@ nav {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: var(
-    --primary-bg-color
-  ); /* Adjust the color and opacity here */
+  background-color: #f2f2f2; /* Adjust the color and opacity here */
   border-radius: 1rem; /* To maintain the border radius of the .grid-item */
   z-index: 1; /* Ensure it's above the background image */
 }
@@ -177,7 +175,7 @@ a {
 }
 
 h1 {
-  color: var(--secondary-text-color);
+  color: #0d0d0d;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -379,7 +377,7 @@ code {
   }
   .menu-overlay {
     height: 50rem;
-    border-bottom: #555555 0.3rem solid;
+    border-bottom: #0400df 0.3rem solid;
   }
   .grid-container {
     margin: 1.5rem;
