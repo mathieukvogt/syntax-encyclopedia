@@ -17,6 +17,23 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialize expandable sections on page load
   setupExpandableSections();
 
+  // Page Loader
+  let counter = 0;
+  const loader = document.getElementById("loader");
+  const interval = setInterval(() => {
+    loader.textContent = counter;
+    counter++;
+    if (counter > 100) {
+      clearInterval(interval);
+      let loaderWrapper = document.getElementById("loader-wrapper");
+      loaderWrapper.style.transition = "transform 0.7s ease";
+      loaderWrapper.style.transform = "translateY(100%)";
+      setTimeout(() => {
+        loaderWrapper.remove();
+      }, 700); // match the timeout with the transition
+    }
+  }, 5); // Adjust the time here for faster or slower counting
+
   // GSAP timeline for animations
   let tl = gsap.timeline({ paused: true });
 

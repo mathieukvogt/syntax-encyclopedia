@@ -18,6 +18,10 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
   <body data-barba="wrapper">
+    <!-- Page Loader -->
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+    </div>
     <!-- Transition Overlay -->
     <div class="transition"></div>
 
@@ -470,7 +474,7 @@ let result = "Score: " + score + ", Pass: " + pass; // "Score: 75, Pass: true"
             </p>
             <pre>
               <code class="language-js">
-                // Embedding a variable in a string
+// Embedding a variable in a string
 let name = "Alice";
 let greeting = `Hello, ${name}!`; // "Hello, Alice!"
 

@@ -32,6 +32,27 @@ body {
   overflow-x: hidden;
 }
 
+#loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0400df;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5000;
+}
+
+#loader {
+  color: white;
+  font-size: 10em;
+  font-family: monospace;
+  font-weight: bold;
+  text-align: center;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
