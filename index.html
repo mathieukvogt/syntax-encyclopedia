@@ -90,26 +90,36 @@
       <!-- Function Introduction -->
       <h2>01 FOUNDATION</h2>
       <p class="function-text">
-        JavaScript variables are a fundamental aspect of the language,
-        serving as a means to store, retrieve, and manipulate data. They
-        act as named containers for data, significantly enhancing the
-        readability and reusability of code. Instead of repeatedly using
-        specific values, programmers can utilize variables to represent
-        these values, making the code more flexible and easier to manage.
-        In JavaScript, variable declaration is primarily done using one of
-        three keywords: var, let, or const, each serving a specific
-        purpose.
+        JavaScript is a versatile programming language primarily used for web development, enabling interactive and dynamic content 
+        on websites. It runs in web browsers, allowing scripts to interact with the content of the webpage, responding to user actions 
+        like clicks, form submissions, and page navigation. JavaScript supports event-driven, functional, and imperative programming 
+        styles, making it adaptable to a wide range of applications. It can manipulate the Document Object Model (DOM) to dynamically 
+        change both the content and appearance of web pages. JavaScript also plays a crucial role in modern web development frameworks 
+        and libraries, like React, Angular, and Vue.js, which facilitate the creation of complex, single-page applications. 
+        Additionally, with the advent of Node.js, JavaScript has expanded beyond the browser, enabling server-side scripting and the 
+        development of desktop and mobile applications.
       </p>
 
       <div class="faq-container">
         <!-- FAQ Row 1 -->
         <div class="faq-row">
           <div class="faq-header">
-            <span>Introduction</span>
+            <span>Variables</span>
             <span class="symbol">&#10169;</span>
           </div>
           <div class="faq-content">
             <h3>Variables</h3><br>
+            <p>
+              JavaScript variables are a fundamental aspect of the language,
+              serving as a means to store, retrieve, and manipulate data. They
+              act as named containers for data, significantly enhancing the
+              readability and reusability of code. Instead of repeatedly using
+              specific values, programmers can utilize variables to represent
+              these values, making the code more flexible and easier to manage.
+              In JavaScript, variable declaration is primarily done using one of
+              three keywords: var, let, or const, each serving a specific
+              purpose.
+            </p><br>
             <h3>var</h3><br>
             <p>
               The var keyword is the oldest and was widely used in pre-ES6
@@ -204,7 +214,112 @@ person.age = 26;
 console.log(person); // Outputs: { name: "Alice", age: 26 }
               </code>
             </pre>
-            <h3>Assignment operator</h3><br>
+            <h3>Data Types</h3><br>
+            <p>
+              In JavaScript, variables can hold several types of data. Strings represent text and are enclosed in quotes, 
+              while Numbers handle both integers and floating-point values without quotes. Booleans represent logical values, 
+              either true or false. Arrays store ordered collections of values, accessible via indices. Objects, a versatile 
+              construct, can represent more complex data structures, encompassing anything from simple key-value pairs to functions 
+              and arrays.
+            </p>
+            <pre>
+              <code class="language-js">
+// String: A sequence of text, enclosed in single or double quotes.
+let myString = 'Hello, World!'; // Using single quotes
+let anotherString = "Hello, World!"; // Using double quotes
+                
+// Number: Represents numerical values, without quotes.
+let myNumber = 25; // An integer
+let myFloat = 3.14; // A floating-point number
+                
+// Boolean: Represents a logical entity, can be either true or false.
+let myBoolean = true; // The value true
+let anotherBoolean = false; // The value false
+                
+// Array: A structure to store multiple values in a single reference.
+let myArray = [1, 'Bob', 'Steve', 10];
+// Accessing array elements: myArray[0] (1), myArray[1] ('Bob'), etc.
+                
+// Object: Can represent complex structures; everything in JavaScript can be an object.
+let myObject = {
+  name: 'Bob',
+  age: 30
+};
+// Accessing object properties: myObject.name ('Bob'), myObject.age (30)
+                
+// Example of using an object from the web environment
+let pageHeader = document.querySelector('h1'); 
+// Selects the first h1 element in the document
+              </code>
+            </pre>
+            <h3>Null & Undefined</h3><br>
+            <p>
+              In JavaScript, null and undefined are both primitive values, but they signify different meanings. null is an 
+              explicitly assigned value used to represent the absence of any object value, indicating that a variable is 
+              intentionally left empty or unknown. On the other hand, undefined means a variable has been declared but has not 
+              yet been assigned a value. undefined is also the default return value for functions that don't explicitly return 
+              anything and the value of properties in objects that have not been set. While null is a deliberate assignment, 
+              undefined typically indicates that a variable is in its initial state or that something is missing.
+            </p>
+              <pre>
+                <code class="language-js">
+// Example of null
+let plannedMeetingDate = null; 
+// The date is intentionally not set yet
+
+// Example of undefined
+let result;
+console.log(result); 
+// Outputs 'undefined' as result has not been assigned a value
+
+// Function returning undefined by default
+function testFunction() {
+  let a = 5; // Function doesn't return anything
+}
+let test = testFunction();
+console.log(test); // Outputs 'undefined'
+
+// Trying to access a non-existent object property
+let person = { name: 'Alice' };
+console.log(person.age); 
+// Outputs 'undefined' as age property doesn't exist
+              </code>
+            </pre>
+          </div>
+        </div>
+        <div class="faq-row">
+          <div class="faq-header">
+            <span>Arithmetic & Assignment Op.</span>
+            <span class="symbol">&#10169;</span>
+          </div>
+          <div class="faq-content">
+            <h3>Arithmetic Operators</h3><br>
+            <p>
+              JavaScript provides several arithmetic operators that allow you to perform mathematical calculations on numbers. 
+              The + operator is used for addition, adding two numbers together. The - operator handles subtraction, taking one 
+              number away from another. For multiplication, the * operator multiplies two numbers. Division is performed using 
+              the / operator, dividing one number by another. Lastly, the % (modulo) operator returns the remainder of a division 
+              between two numbers.
+            </p>
+            <pre>
+              <code class="language-js">
+// Addition: Adds two numbers
+let sum = 5 + 3; // sum is now 8
+
+// Subtraction: Subtracts one number from another
+let difference = 10 - 4; // difference is now 6
+
+// Multiplication: Multiplies two numbers
+let product = 7 * 3; // product is now 21
+
+// Division: Divides one number by another
+let quotient = 20 / 5; // quotient is now 4
+
+// Modulo: Returns the remainder of a division
+let remainder = 26 % 4; // remainder is now 2
+              </code>
+            </pre>
+            <h3>Assignment Operators</h3><br>
             <p>
               The assignment operator in JavaScript is crucial for assigning values to variables. The basic assignment operator = 
               assigns the right operand's value to its left operand. JavaScript also includes compound assignment operators that 
@@ -258,39 +373,117 @@ let secondNumber = firstNumber; // Assigns the value of 'firstNumber' to 'second
 console.log(secondNumber); // Outputs: 7 
               </code>
             </pre>
-            <h3>String Interpolation</h3><br>
+          </div>
+        </div>
+        <div class="faq-row">
+          <div class="faq-header">
+            <span>Comments</span>
+            <span class="symbol">&#10169;</span>
+          </div>
+          <div class="faq-content">
+            <h3>Single & Multi-Line Comments</h3><br>
             <p>
-              For situations where a variable's value is meant to remain
-              constant, const is used. Like let, const also provides
-              block-scoped variables. However, it adds a layer of protection by
-              making the variable's value immutable - once a const variable is
-              assigned a value during declaration, it cannot be reassigned.
-              Attempting to change the value of a const variable results in a
-              runtime error. This feature is particularly useful for maintaining
-              constants and ensuring that their values remain unchanged
-              throughout the execution of the program. Choosing between var,
-              let, and const depends on the specific needs of the program,
-              particularly in terms of scope and the variable's mutability.
-              Understanding these differences is crucial for effective
-              programming in JavaScript, as it directly impacts the
-              functionality and reliability of the code.
+              In JavaScript, single-line comments are created using two forward slashes //, and they comment out everything from 
+              the slashes to the end of the line. Multi-line comments start with /* and end with */, spanning multiple lines if 
+              needed. Single-line comments are typically used for brief notes or to quickly disable a line of code. In contrast, 
+              multi-line comments are suited for longer explanations or for commenting out large sections of code during development 
+              or debugging. Both types of comments are essential for making code more understandable and maintainable.
+            </p><br>
+              <pre>
+                <code class="language-js">
+// This is a single-line comment
+let x = 5; // This comment is after a line of code
+
+/* This is a multi-line comment
+   which can span across
+   several lines */
+let y = 10;
+              </code>
+            </pre>
+          </div>
+        </div>
+        <div class="faq-row">
+          <div class="faq-header">
+            <span>Strings</span>
+            <span class="symbol">&#10169;</span>
+          </div>
+          <div class="faq-content">
+            <h3>Strings</h3><br>
+            <p>
+              In JavaScript, strings are a primitive data type used to represent text. They consist of a sequence of characters, 
+              which can include letters, numbers, spaces, and symbols. Strings are enclosed in either single quotes (') or double 
+              quotes ("), and both types of quotes offer the same functionality. The choice between single and double quotes is 
+              often based on personal or organizational coding standards, and it's common to stick with one type for consistency. 
+              JavaScript also supports template literals (enclosed in backticks `) for strings, which allow for embedded expressions 
+              and multi-line strings.
+            </p><br>
+              <pre>
+                <code class="language-js">
+// String enclosed in single quotes
+let singleQuoteString = 'Hello, World!';
+
+// String enclosed in double quotes
+let doubleQuoteString = "JavaScript is fun!";
+
+// String with numbers and symbols
+let stringWithNumbers = 'Version 2.0 - Released in 2021!';
+              </code>
+            </pre>
+            <h3>String Concatenation</h3><br>
+            <p>
+              String concatenation in JavaScript is the process of joining two or more strings together into one. This is most 
+              commonly achieved using the + operator. When the + operator is used between strings, it appends the second string 
+              to the first, creating a new combined string. Concatenation is not limited to just two strings and can involve multiple 
+              strings. It's also flexible enough to concatenate strings with other data types, such as numbers or boolean values, 
+              which are converted to strings during the concatenation process.
+            </p>
+              <pre>
+                <code class="language-js">
+// Basic concatenation of two strings
+let greeting = "Hello, " + "world!"; // "Hello, world!"
+
+// Concatenating multiple strings
+let fullName = "John" + " " + "Doe"; // "John Doe"
+
+// Concatenating strings with a variable
+let name = "Alice";
+let welcomeMessage = "Hi, " + name + "!"; // "Hi, Alice!"
+
+// Concatenating strings with other data types
+let age = 30;
+let ageStatement = "I am " + age + " years old."; // "I am 30 years old."
+
+// Concatenating strings with numbers and boolean values
+let score = 75;
+let pass = true;
+let result = "Score: " + score + ", Pass: " + pass; // "Score: 75, Pass: true"
+                </code>
+              </pre>
+              <h3>String Interpolation & Template Literals</h3><br>
+              <p>
+                String interpolation in JavaScript is a technique for embedding expressions, such as variables or calculations, 
+                within strings. It is achieved using template literals, which are enclosed in backticks (`) instead of regular 
+                quotes. Inside these template literals, expressions are placed within placeholders, marked by ${}. This allows 
+                for dynamic string creation, where the expressions inside the placeholders are evaluated and their results are 
+                seamlessly integrated into the string. Template literals also support multi-line strings and improve readability, 
+                especially when concatenating long strings or multiple variables.
             </p>
             <pre>
               <code class="language-js">
-// Example 1: Declaring a constant
-const pi = 3.14;
-console.log(pi); // Outputs: 3.14
-pi = 3.15; 
-// Uncaught TypeError: Assignment to constant variable.
+                // Embedding a variable in a string
+let name = "Alice";
+let greeting = `Hello, ${name}!`; // "Hello, Alice!"
 
-                
-// Example 2: 'const' in an object
-const person = { name: "Alice", age: 25 };
-console.log(person); // Outputs: { name: "Alice", age: 25 }
-                
-// While the object is constant, its properties can be changed
-person.age = 26;
-console.log(person); // Outputs: { name: "Alice", age: 26 }
+// Using an expression in a string
+let price = 10;
+let taxRate = 0.05;
+let totalPrice = `Total: $${price * (1 + taxRate)}`; // "Total: $10.5"
+
+// Multi-line string using template literals
+let item = "coffee";
+let quantity = 3;
+let order = `You ordered ${quantity} units of:
+${item}`; // "You ordered 3 units of:\ncoffee"
               </code>
             </pre>
           </div>

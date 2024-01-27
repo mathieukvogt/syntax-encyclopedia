@@ -275,7 +275,7 @@ p {
 .function-text {
   color: var(--primary-text-color);
   margin: 4.5rem;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: bold;
   text-align: justify;
 }
@@ -312,7 +312,7 @@ p {
   height: 0;
   overflow: hidden;
   transition: height 0.3s ease;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: bold;
   text-align: justify;
   color: var(--secondary-text-color);

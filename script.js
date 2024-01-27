@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Menu overlay animation
   tl.to(".menu-overlay", {
-    duration: 0.75,
+    duration: 0.5,
     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
     ease: "power2.out",
   });
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   tl.to(
     ".grid-item",
     {
-      duration: 0.75,
+      duration: 0.5,
       height: "200px",
       ease: "power2.out",
     },
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Close menu when a grid item is clicked
   document.querySelectorAll(".grid-item a").forEach((anchor) => {
     anchor.addEventListener("click", function () {
-      setTimeout(closeMenu, 100); // Delay in milliseconds
+      setTimeout(closeMenu, 75); // Delay in milliseconds
     });
   });
 
@@ -119,14 +119,14 @@ document.addEventListener("DOMContentLoaded", function () {
     var tl = gsap.timeline();
 
     tl.to(".transition", {
-      duration: 1,
+      duration: 0.75,
       scaleY: 1,
       transformOrigin: "bottom",
       ease: "power4.inOut",
     });
 
     tl.to(".transition", {
-      duration: 1,
+      duration: 0.75,
       scaleY: 0,
       transformOrigin: "top",
       ease: "power4.inOut",
