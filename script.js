@@ -65,16 +65,29 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Toggle light theme
-  var light = document.getElementById("light");
-
-  light.onclick = function () {
+  var lightToggle = document.getElementById("light-toggle");
+  var lightOverlay = document.getElementById("light-overlay");
+  function toggleTheme() {
     document.body.classList.toggle("light-theme");
-    if (document.body.classList.contains("light-theme")) {
-      light.textContent = "DARK";
-    } else {
-      light.textContent = "LIGHT";
+    var themeText = document.body.classList.contains("light-theme")
+      ? "DARK"
+      : "LIGHT";
+    if (lightToggle) {
+      lightToggle.textContent = themeText;
     }
-  };
+    if (lightOverlay) {
+      lightOverlay.textContent = themeText;
+    }
+  }
+
+  if (lightToggle) {
+    lightToggle.onclick = toggleTheme;
+  }
+
+  if (lightOverlay) {
+    lightOverlay.onclick = toggleTheme;
+  }
+
   // Function to manually trigger the page transition
   function triggerPageTransition() {
     // Manually trigger the page transition
