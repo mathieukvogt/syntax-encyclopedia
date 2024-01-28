@@ -355,6 +355,19 @@ p {
   transition: transform 0.3s ease; /* Smooth transition for rotation */
 }
 
+.symbol-one {
+  color: rgb(255, 184, 210);
+}
+.symbol-two {
+  color: rgb(105, 226, 219);
+}
+.symbol-three {
+  color: rgb(205, 197, 255);
+}
+.symbol-four {
+  color: rgb(255, 199, 138);
+}
+
 pre,
 code {
   border-radius: 0.8rem; /* Adjust as needed */
