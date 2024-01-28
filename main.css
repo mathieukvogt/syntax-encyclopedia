@@ -30,6 +30,12 @@ body {
   background-color: var(--primary-bg-color);
   font-family: Helvetica, sans-serif;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none; /* Removes underlines */
+  color: inherit;
 }
 
 #loader-wrapper {
