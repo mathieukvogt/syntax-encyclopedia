@@ -1,20 +1,20 @@
 :root {
-  --primary-bg-color: #0d0d0d;
-  --primary-text-color: #f2f2f2;
-  --secondary-bg-color: #f2f2f2;
-  --secondary-text-color: #f2f2f2;
-  --tertiary-text-color: #f2f2f2;
-  --fourth-text-color: #0d0d0d;
-  --fifth-text-color: #f2f2f2;
+  --primary-bg-color: #181818;
+  --primary-text-color: #e9e9e9;
+  --secondary-bg-color: #e9e9e9;
+  --secondary-text-color: #e9e9e9;
+  --tertiary-text-color: #e9e9e9;
+  --fourth-text-color: #181818;
+  --fifth-text-color: #e9e9e9;
   font-size: 10px;
 }
 .light-theme {
-  --primary-bg-color: #f2f2f2;
-  --primary-text-color: #0d0d0d;
-  --secondary-bg-color: #0d0d0d;
-  --secondary-text-color: #0d0d0d;
-  --tertiary-text-color: #0d0d0d;
-  --fourth-text-color: #f2f2f2;
+  --primary-bg-color: #e9e9e9;
+  --primary-text-color: #181818;
+  --secondary-bg-color: #181818;
+  --secondary-text-color: #181818;
+  --tertiary-text-color: #181818;
+  --fourth-text-color: #e9e9e9;
 }
 
 * {
@@ -362,16 +362,16 @@ p {
 }
 
 .symbol-one {
-  color: rgb(255, 184, 210);
+  color: rgb(188, 177, 255);
 }
 .symbol-two {
-  color: rgb(105, 226, 219);
+  color: rgb(188, 177, 255);
 }
 .symbol-three {
-  color: rgb(205, 197, 255);
+  color: rgb(188, 177, 255);
 }
 .symbol-four {
-  color: rgb(255, 199, 138);
+  color: rgb(188, 177, 255);
 }
 
 pre,
